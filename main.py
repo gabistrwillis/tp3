@@ -1,16 +1,26 @@
 # This is a sample Python script.
 
+import random
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+from random import randint
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Jeu:
+    def __init__(self, m):
+        self.m=random.randint(0,m)
+
+    def test(self):
+        k=int(input('rentrez k :'))
+        while k is not int(self.m):
+            print ('essayez encore')
+            k=int(input('rentrez k: '))
+
+        print ("Trouvé")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+p = Jeu(3)
+p.test()
