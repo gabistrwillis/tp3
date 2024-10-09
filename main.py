@@ -18,7 +18,7 @@ class Jeu:
 
         print ("Trouvé")
 
-print('hello')
+print('hell')
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
