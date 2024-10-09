@@ -7,20 +7,27 @@ import random
 from random import randint
 
 class Jeu:
-    def __init__(self, m):
-        self.m=random.randint(0,m)
-
+    def __init__(self, m, n):
+        self.m=random.randint(1,m)
+        self.n=n
     def test(self):
+
+        print(self.n)
         k=int(input('rentrez k :'))
-        while k is not int(self.m):
-            print ('essayez encore')
+        while k != int(self.m):
+            self.n = self.n - 1
+            print ('essayez encore ! Essais restants:',self.n)
+            if self.n ==0:
+                print("Tu as perdu!!")
+                break
             k=int(input('rentrez k: '))
 
-        print ("Trouvé")
+        if k==self.m:
+            print ("Trouvé")
 
-print('hello')
+print('hell')
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-p = Jeu(3)
+p = Jeu(2,5)
 p.test()
