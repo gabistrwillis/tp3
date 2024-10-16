@@ -8,10 +8,14 @@ from random import randint
 
 class Jeu:
     def __init__(self, m, n):
-        self.m=random.randint(0,m)
+        self.m=random.randint(1,m)
         self.n=n
     def test(self):
-        k=int(input('rentrez k :'))
+        k=(input('rentrez k :'))
+        if type(k) != int:
+            k=int(input('Veuillez rentrer un entier svp:'))
+
+
         while k is not int(self.m):
             print ('essayez encore')
             k=int(input('rentrez k: '))
@@ -23,5 +27,5 @@ print('hell')
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-p = Jeu(3)
+p = Jeu(3,2)
 p.test()
